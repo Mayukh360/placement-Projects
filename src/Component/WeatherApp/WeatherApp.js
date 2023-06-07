@@ -24,6 +24,7 @@ export default function WeatherApp() {
         console.log("Response", response);
         setData(response);
         setcityData(res.data[0].LocalizedName);
+        setEnteredCity('');
       } catch (error) {
         console.log(error);
       }
@@ -41,16 +42,18 @@ export default function WeatherApp() {
     event.preventDefault();
     setSubmitCity(enteredCity.toLowerCase())
     
+    
   }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
+    <div >
+      <form  onSubmit={submitHandler} style={{display:'flex', justifyContent:'center', flexDirection:"row",marginTop:'3rem'}}>
       <label>Input City</label>
       <input value={enteredCity} type="text" onChange={handleCityChange}/>
       <button>Submit</button>
       </form>
-        <h3>{cityData}</h3>
+        <h3 style={{display:'flex', justifyContent:'center', flexDirection:"row"}}>{cityData}</h3>
+        <ul style={{display:'flex', justifyContent:'center', flexDirection:"row"}}>
       {data.map((item, index) => (
         <li key={index}>
           {item.Date} <br/>
@@ -63,6 +66,7 @@ export default function WeatherApp() {
           Day Weather :{item.Day.IconPhrase}
         </li>
       ))}
+      </ul>
     </div>
   );
 }
