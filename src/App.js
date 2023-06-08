@@ -1,10 +1,9 @@
-
-
 import TodoList from './Component/TodoList.js/TodoList';
 import WeatherApp from './Component/WeatherApp/WeatherApp';
 import Imagegallery from './Component/Imagegallery/Imagegallery';
 import MovieApp from './Component/MovieApp/MovieApp';
 import Calculator from './Component/Calculator/Calculator';
+import Recipie from './Component/Recipie/Recipie';
 
 function App() {
   return (
@@ -13,7 +12,8 @@ function App() {
       {/* <WeatherApp/> */}
       {/* <Imagegallery/> */}
       {/* <MovieApp/> */}
-      <Calculator/>
+      {/* <Calculator/> */}
+      <Recipie/>
     </div>
   );
 }
