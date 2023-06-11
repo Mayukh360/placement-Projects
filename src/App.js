@@ -4,6 +4,8 @@ import Imagegallery from './Component/Imagegallery/Imagegallery';
 import MovieApp from './Component/MovieApp/MovieApp';
 import Calculator from './Component/Calculator/Calculator';
 import Recipie from './Component/Recipie/Recipie';
+import QuizApp from './Component/Quiz/QuizApp';
+import Github from './Component/GithubSearch/Github';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       {/* <Imagegallery/> */}
       {/* <MovieApp/> */}
       {/* <Calculator/> */}
-      <Recipie/>
+      {/* <Recipie/> */}
+      {/* <QuizApp/> */}
+      <Github/>
     </div>
   );
 }
